@@ -1,11 +1,11 @@
 import closeAllModals from './closeAllModals'
 
 const modals = () => {
+    const body = document.querySelector('body');
     const bindModals = (triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) => {
         const trigger = document.querySelectorAll(triggerSelector),
               modal = document.querySelector(modalSelector),
-              close = document.querySelector(closeSelector),
-              body = document.querySelector('body');
+              close = document.querySelector(closeSelector);
 
         trigger.forEach(item => {
             item.addEventListener('click', e => {
